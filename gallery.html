@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Jolly Homestay</title>
+    <style>
+         * {
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            border-radius: 10px;
+        }
+        .contact {
+            background: white;
+            padding: 40px;
+            margin-top: 20px;
+        }
+        nav {
+            width: 100%;
+            background-color: #66bb6a;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3%;
+            padding: 10px 0;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #558b2f;
+        }
+
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+           background-color: #e8f5e9 ;
+           padding: 20px;
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        
+    #present{
+        color: rgb(0, 0, 0)
+    }
+       
+        .slide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+
+            text-align: center;
+            /* Add a semi-transparent background */
+            padding: 10px 20px;
+            /* Add padding for better visibility */
+            border-radius: 5px;
+            /* Round the corners */
+        }
+        h2{
+            margin: 30px 0 20px;
+        }
+       
+    </style>
+</head>
+<body>
+     
+    <nav>
+        <a  href="index.html">home</a>
+        <a id="present" href="gallery.html">gallery</a>
+        <a href="near places.html">Near Places</a>
+        <a href="facilities.html">facilities</a>
+    </nav>
+
+    <h2> welcome to our Gallery</h2>
+    <div class="gallery">
+
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+    </div>
+    <section>
+    <h1>some videos</h1>
+    <video src="videos/Untitled video - Made with Clipchamp (1).mp4" controls width="100%" height="500px" loop></video>
+    <video src="videos/Untitled video - Made with Clipchamp (2).mp4"controls width="100%" height="500px" loop></video>
+</section>
+        <section class="contact">
+            <h2>Contact Us for Bookings and Enquiries:</h2><br>
+            <p><strong>📞 Phone(or whatsapp):</strong> 7899436653 or 9741973066</p>
+            <p><strong>📧 Email:</strong> suran.kudligi.143@gmail.com</p>
+        </section>
+    
+        <footer>
+            <p>&copy; 2025 Jolly Homestay. All rights reserved.</p>
+        </footer>
+    
+</body>
+</html>
