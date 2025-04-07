@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Tourist places near Jolly Homestay in Jog Falls">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near Places | Jolly Homestay</title>
+    <style>
+        * {
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f8e9;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #66bb6a;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3%;
+            padding: 10px 0;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #558b2f;
+        }
+
+        #present {
+            color: black;
+        }
+
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .place-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .place-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .places img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .imagedistance {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #1b5e20;
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a id="present" href="near places.html">Near Places</a>
+        <a href="facilities.html">Facilities</a>
+    </nav>
+
+    <h2>Tourist places near Jolly Homestay</h2>
+
+    <section class="places">
+        <div class="place-item">
+            <img src="jogfalls.jpeg" alt="Jog Falls">
+            <div class="imagedistance">Jog Falls - 1 km</div>
+        </div>
+        <div class="place-item">
+            <img src="linganamakki.jpeg" alt="Linganamakki Dam">
+            <div class="imagedistance">Linganamakki Dam - 6 km</div>
+        </div>
+        <div class="place-item">
+            <img src="thavarekatte.jpeg" alt="Thavarekatte">
+            <div class="imagedistance">Thavarekatte - 2 km</div>
+        </div>
+        <div class="place-item">
+            <img src="britishbungalow.jpeg" alt="British Bungalow">
+            <div class="imagedistance">British Bungalow - 3 km</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jolly Homestay. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
