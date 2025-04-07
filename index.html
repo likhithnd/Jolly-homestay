@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="this is the website of Jolly Homestay near Jog falls">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Homestay</title>
+    <style>
+        * {   
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #e8f5e9;
+            color: #000000;
+            border-radius: 10px; 
+           /* Prevent horizontal scrolling */
+        }
+
+     contact p {
+        text-transform: lowercase;
+     }
+        .slider {
+            position: relative;
+            width: 100%;
+            height:700px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        h1{
+            margin-bottom: 20px;
+            margin-top: 100px;
+            width: 100%;
+            text-transform: capitalize;
+        }
+       
+        header {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            z-index: 2;
+            text-transform: capitalize;
+            /* Ensure it appears above the slides */
+        }
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-transform: capitalize;
+        }
+
+        header p {
+            font-size: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            text-transform: capitalize;
+        }
+
+       
+        nav {
+            width: 100%;
+            background-color: #66bb6a;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3%;
+            padding: 10px 0;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #558b2f;
+        }
+
+
+        .slide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+
+            text-align: center;
+            /* Add a semi-transparent background */
+            padding: 10px 20px;
+            /* Add padding for better visibility */
+            border-radius: 5px;
+            text-transform: capitalize;
+            /* Round the corners */
+        }
+
+        iframe {
+            width: 100%;
+            /* Ensure iframe fits within its container */
+            border: 0;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        /* Image Slider */
+
+
+        .slides {
+            position: relative;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .slide:nth-child(1) {
+            opacity: 1;
+            /* Ensure the first slide is visible initially */
+        }
+
+        /* Rooms Section */
+        .rooms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px;
+            text-transform: capitalize;
+        }
+
+        .room {
+            background: white;
+            padding: 10px;
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-transform: capitalize;
+        }
+
+        .room img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+            text-transform: capitalize;
+        }
+
+        .room h3 {
+            margin-top: 10px;
+            text-transform: capitalize;
+        }
+
+        /* Google Maps */
+        .map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        /* Contact Info */
+        .contact {
+            background: white;
+            padding: 40px;
+            margin-top: 20px;
+            text-transform: lowercase !important;
+            
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+
+        h2 {
+            margin-top: 5vh;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        #s {
+            padding: 10px 20px;
+            position: absolute;
+            top: 750px;
+            text-align: start;
+            width: 100%;
+            z-index: 2;
+            transform: translateX(-50%);
+            text-transform: capitalize;
+
+        }
+
+        #i {
+            margin-top: 15px;
+            text-transform: capitalize;
+        }
+
+        /* Slider Navigation Buttons */
+        button.prev,
+        button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 3;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+
+        button.prev {
+            left: 10px;
+            /* Position the Previous button on the left */
+        }
+
+        button.next {
+            right: 10px;
+            /* Position the Next button on the right */
+        }
+
+        button.prev:hover,
+        button.next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Darker background on hover */
+        }
+        pre{
+            width: 0px; 
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="slider">
+        <header>
+            <h1>Jolly Homestay</h1>
+            <p>A place of happiness</p>
+        </header>
+
+        <nav>
+            <a style="color: rgb(0, 0, 0);" href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="near places.html">Near Places</a>
+            <a href="facilities.html">facilities</a>
+        </nav>
+        <!-- Image Slider -->
+        <div class="slides">
+            <div class="slide">
+                <img src="images/jolly homestay .jpg" alt="Slide 1">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 7.jpg" alt="Slide 2">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 20.jpg" alt="images/Jolly-Homestay">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 4.jpg" alt="images/Jolly-Homestay">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 22.jpg" alt="images/Jolly-Homestay">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 14.jpg" alt="images/Jolly-Homestay">
+                <div class="slide-text"></div>
+            </div>
+            <div class="slide">
+                <img src="images/jolly 13.jpg" alt="images/Jolly-Homestay">
+                <div class="slide-text"></div>
+
+
+        </div>
+        <button class="prev" onclick="prevSlide()"> next &#10095;</button>
+        <button class="next" onclick="nextSlide()">&#10094; previous</button>
+    </section>
+    </div>
+
+    <!-- Rooms & Prices -->
+    <section>
+        <h2>Our 5 Cottages</h2>
+        <h2>All our 5 cottages are similar in structure and facilities</h2>
+        <h2>for price enquiry you can call us {phone number is given at the bottom of the webpage}</h2>
+           
+           <h2>for some additional information regarding  roooms you can vist <a href="information about rooms.html">information about rooms</a> </h2>
+        <div class="rooms">
+            <div class="room">
+                <img src="images/jolly 22.jpg" alt="Room 1">
+                <h3>cottage 1</h3>
+
+            </div>
+            <div class="room">
+                <img src="images/jolly 21.jpg" alt="Room 2">
+                <h3>cottage 2</h3>
+
+            </div>
+            <div class="room">
+                <img src="images/jolly 4.jpg" alt="Room 3">
+                <h3>cottage 3</h3>
+
+            </div>
+            <div class="room">
+                <img src="images/jolly 6.jpg" alt="Room 4">
+                <h3>cottage 4</h3>
+
+            </div>
+            <div class="room">
+                <img src="images/jolly 22.jpg" alt="Room 5">
+                <h3>cottage 5</h3>
+            </div>
+            <br>
+            <h2>Click "Facilities" on top to view our facilities</h2>
+            <h2>Click "Gallery" on top to view our complete photos</h2>
+            <h2>Click "Near Places" on top to view nearby places</h2>
+        </div>
+    </section>
+       
+    <!-- Google Maps -->
+    <section>
+        <h2 id="l">Our Location:</h2>
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28930.934746853472!2d74.81699672398152!3d14.203616300843317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc0d006bc257c1%3A0x2eeb7474d4328706!2sJolly%20Homestay!5e1!3m2!1sen!2sin!4v1743405679568!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+    <!-- Contact Info -->
+    <section class="contact">
+        <h2>Contact Us for Bookings and Enquiries:</h2><br>
+        <p><strong>📞 Phone(or whatsapp):</strong> 7899436653 or 9741973066</p>
+        <p><strong>📧 Email:</strong> Suran.kudligi.143@gmail.com</p>
+    </section>
+
+    <footer >
+        <p>&copy; 2025 Jolly Homestay. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Unified Image Slider Logic
+        let slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+        let slideInterval;
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? "1" : "0"; // Show the current slide, hide others
+            });
+        }
+
+        // Function to go to the next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length; // Move to the next slide
+            showSlide(currentIndex);
+        }
+
+        // Function to go to the previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Move to the previous slide
+            showSlide(currentIndex);
+        }
+
+        // Start the automatic slider
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 3000); // Change slide every 5 seconds
+        }
+
+        // Stop the automatic slider
+        function stopSlider() {
+            clearInterval(slideInterval);
+        }
+
+        // Initialize the slider
+        showSlide(currentIndex);
+        startSlider();
+
+        // Add event listeners to navigation buttons
+        document.querySelector(".prev").addEventListener("click", () => {
+            stopSlider(); // Stop automatic sliding when manually navigating
+            prevSlide();
+            startSlider(); // Restart the slider after manual navigation
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            stopSlider(); // Stop automatic sliding when manually navigating
+            nextSlide();
+            startSlider(); // Restart the slider after manual navigation
+        });
+    </script>
+    </script>
+
+</body>
+
+</html>
