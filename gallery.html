@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,15 +20,14 @@
         }
 
         nav {
-    width: 100%;
-    background-color: #66bb6a;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 15px;
-}
-
+            width: 100%;
+            background-color: #66bb6a;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px 0;
+        }
 
         nav a {
             text-decoration: none;
@@ -51,8 +49,9 @@
             text-transform: capitalize;
         }
 
-        section {
+        section{
             margin-bottom: 40px;
+            
         }
 
         h2 {
@@ -75,6 +74,7 @@
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         .gallery-grid img:hover {
@@ -89,11 +89,74 @@
             text-align: center;
             font-size: 14px;
         }
+
+        /* Lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            display: none;
+        }
+        #1{
+            margin-bottom: 40px;
+        }
+        #2{margin-bottom: 40px;}
+        #3{ margin-bottom: 40px;}
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.3);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .close:hover {
+            color: #ccc;
+        }
+        #new{
+            color: white;
+        }
     </style>
 </head>
-
 <body>
+    <div style="text-align: center; margin: 20px 0;">
+        <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })"
+    style="position: fixed;
+           bottom: 20px;
+           right: 20px;
+           padding: 15px 25px;
+           background-color: #43a047;
+           color: white;
+           font-size: 16px;
+           border: none;
+           border-radius: 50px;
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+           cursor: pointer;
+           z-index: 1000;">
+    Book Now
+</button>
 
+    </div>
     <nav>
         <a href="index.html">Home</a>
         <a style="color: black;" href="gallery.html">Gallery</a>
@@ -103,64 +166,125 @@
 
     <h1>Gallery</h1>
 
-    <section>
+    <section title="click me to view completly">
         <h2>Interior</h2>
         <div class="gallery-grid">
-            <img src="images/interior1.jpg" alt="Interior Room 1">
-            <img src="images/interior2.jpg" alt="Interior Room 2">
+            <a href="images/jolly 4.jpg"><img src="images/jolly 4.jpg" alt="Interior 1"></a>
+            <a href="images/jolly 5.jpg"><img src="images/jolly 5.jpg" alt="Interior 2"></a>
+            <a href="images/added 3.jpg"><img src="images/added 3.jpg" alt="Interior 2"></a>
         </div>
     </section>
 
-    <section>
+    <section title="click me to view completly">
         <h2>Exterior</h2>
         <div class="gallery-grid">
-            <img src="images/exterior1.jpg" alt="Exterior View 1">
-            <img src="images/exterior2.jpg" alt="Exterior View 2">
+            <a href="images/jolly 1.jpg"><img src="images/jolly 1.jpg" alt="Exterior 1"></a>
+            <a href="images/jolly 12.jpg"><img src="images/jolly 12.jpg" alt="Exterior 2"></a>
+            <a href="images/jolly 24.jpg"><img src="images/jolly 24.jpg" alt="Exterior 2"></a>
+            <a href="images/jolly 16.jpg"><img src="images/jolly 16.jpg" alt="Exterior 2"></a>
+            <a href="images/jolly 20.jpg"><img src="images/jolly 20.jpg" alt="Exterior 2"></a>
+            <a href="images/added 7.jpg"><img src="images/added 7.jpg" alt="Exterior 2"></a>
         </div>
     </section>
-    <section>
-        <h2>Washroom</h2>
-        <div class="gallery-grid">
-            <img src="images/other1.jpg" alt="Other Image 1">
-            <img src="images/other2.jpg" alt="Other Image 2">
-        </div>
-    </section>
-    <section>
-        <h2>roads</h2>
-        <div class="gallery-grid">
-            <img src="images/other1.jpg" alt="Other Image 1">
-            <img src="images/other2.jpg" alt="Other Image 2">
-        </div>
-    </section>
-    <section>
+
+    <section title="click me to view completly">
         <h2>Entrance</h2>
         <div class="gallery-grid">
-            <img src="images/entrance1.jpg" alt="Entrance 1">
-            <img src="images/entrance2.jpg" alt="Entrance 2">
+            <a href="images/jolly 13.jpg"><img src="images/jolly 13.jpg" alt="Entrance 1"></a>
+            <a href="images/added.jpg"><img src="images/added.jpg" alt="Entrance 2"></a>
         </div>
-    </section>
+    </section title="click me to view completly">
 
-    <section>
+    <section title="click me to view completly">
         <h2>Surrounding Places</h2>
         <div class="gallery-grid">
-            <img src="images/surrounding1.jpg" alt="Nearby Place 1">
-            <img src="images/surrounding2.jpg" alt="Nearby Place 2">
+            <a href="images/added 4.jpg"><img src="images/added 4.jpg" alt="Surrounding 1"></a>
+            
         </div>
     </section>
 
-    <section>
-        <h2>Other</h2>
+    <section title="click me to view completly">
+        <h2>Washroom</h2>
         <div class="gallery-grid">
-            <img src="images/other1.jpg" alt="Other Image 1">
-            <img src="images/other2.jpg" alt="Other Image 2">
+            <a href="images/added 2.jpg"><img src="images/added 2.jpg" alt="Other 1"></a>
+            <a href="images/jolly 11.jpg"><img src="images/jolly 11.jpg" alt="Other 2"></a>
         </div>
     </section>
+    <section title="click me to view completly">
+        <h2>Roads connecting Cottages</h2>
+        <div class="gallery-grid">
+            <a href="images/jolly 8.jpg"><img src="images/jolly 8.jpg" alt="Other 1"></a>
+            <a href="images/jolly 23.jpg"><img src="images/jolly 23.jpg" alt="Other 1"></a>
+            <a href="images/jolly 15.jpg"><img src="images/jolly 15.jpg" alt="Other 2"></a>
+            <a href="images/jolly 18.jpg"><img src="images/jolly 18.jpg" alt="Other 1"></a>
+            <a href="images/jolly 19.jpg"><img src="images/jolly 19.jpg" a  lt="Other 2"></a>
+            <a href="images/jolly 3.jpg"><img src="images/jolly 3.jpg" alt="Other 2"></a>
+            <a href="images/jolly 17.jpg"><img src="images/jolly 17.jpg" alt="Other 2"></a>
 
-    <footer>
+        </div>
+    </section title="click me to view completly">
+      <section title="click me to view completly">
+        <h2> videos  </h2>
+        <div class="videos">
+            <a id="1"href="videos/Untitled video - Made with Clipchamp (1).mp4"><video src="videos/Untitled video - Made with Clipchamp (1).mp4" width="100%" height="400px" controls loop></video></a>
+            <a id="2" href="videos/Untitled video - Made with Clipchamp (2).mp4"><video src="videos/Untitled video - Made with Clipchamp (2).mp4" width="100%" height="400px" controls loop></video></a>
+            <a id="3" href="videos/added 9 video - Made with Clipchamp.mp4"><video src="videos/added 9 video - Made with Clipchamp.mp4" width="100%" height="400px" controls loop></video></a>
+            
+        </div>
+    </section title="click me to view completly">
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox">
+        <a href="images/jolly 4.jpg" class="close">&times;</a>
+        <img src="images/jolly 4.jpg" alt="Interior 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/interior2.jpg" alt="Interior 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/exterior1.jpg" alt="Exterior 1">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/exterior2.jpg" alt="Exterior 2">
+    </div>
+    <div id="img5" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/entrance1.jpg" alt="Entrance 1">
+    </div>
+    <div id="img6" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/entrance2.jpg" alt="Entrance 2">
+    </div>
+    <div id="img7" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/surrounding1.jpg" alt="Surrounding 1">
+    </div>
+    <div id="img8" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/surrounding2.jpg" alt="Surrounding 2">
+    </div>
+    <div id="img9" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/other1.jpg" alt="Other 1">
+    </div>
+    <div id="img10" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/other2.jpg" alt="Other 2">
+    </div>
+
+    <footer id="booking">
+        <h2 id="new">Contact Us for Bookings and Enquiries:</h2><br>
+        <p><strong>📞 Phone(or whatsapp):</strong> 7899436653 or 9741973066</p>
+        <p><strong>📧 Email:</strong> Suran.kudligi.143@gmail.com</p>
+        <br><br>
         <p>&copy; 2025 Jolly Homestay. All rights reserved.</p>
     </footer>
 
 </body>
-
 </html>
+
+
 

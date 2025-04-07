@@ -180,7 +180,7 @@
             height: 400px;
             margin-top: 20px;
         }
-
+         
         /* Contact Info */
         .contact {
             background: white;
@@ -263,7 +263,7 @@
 <body>
     <section class="slider">
         <header>
-            <h1>Jolly Homestay</h1>
+            <h1>Welcome to Jolly Homestay</h1>
             <p>A place of happiness</p>
         </header>
 
@@ -315,7 +315,6 @@
         <h2>Our 5 Cottages</h2>
         <h2>All our 5 cottages are similar in structure and facilities</h2>
         <h2>for price enquiry you can call us {phone number is given at the bottom of the webpage}</h2>
-
         <div class="rooms">
             <div class="room">
                 <img src="images/jolly 22.jpg" alt="Room 1">
@@ -357,13 +356,32 @@
     </section>
     
     <!-- Contact Info -->
-    <section class="contact">
-        <h2>Contact Us for Bookings and Enquiries:</h2><br>
-        <p><strong>📞 Phone(or whatsapp):</strong> 7899436653 or 9741973066</p>
-        <p><strong>📧 Email:</strong> suran.kudligi.143@gmail.com</p>
-    </section>
+    
+   
+    <div style="text-align: center; margin: 20px 0;">
+        <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })"
+    style="position: fixed;
+           bottom: 20px;
+           right: 20px;
+           padding: 15px 25px;
+           background-color: #43a047;
+           color: white;
+           font-size: 16px;
+           border: none;
+           border-radius: 50px;
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+           cursor: pointer;
+           z-index: 1000;">
+    Book Now
+</button>
 
-    <footer >
+    </div>
+    
+    <footer id="booking">
+        <h2 >Contact Us for Bookings and Enquiries:</h2><br>
+        <p><strong>📞 Phone(or whatsapp):</strong> 7899436653 or 9741973066</p>
+        <p><strong>📧 Email:</strong> Suran.kudligi.143@gmail.com</p>
+        <br><br>
         <p>&copy; 2025 Jolly Homestay. All rights reserved.</p>
     </footer>
 
